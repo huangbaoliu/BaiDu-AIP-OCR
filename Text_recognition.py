@@ -2,6 +2,11 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import *
 
+
+APP_ID = 'xxxxxxxx'  # 刚才获取的 ID，下同
+API_KEY = 'xxxxxxxx'
+SECRECT_KEY = 'xxxxxxxx'
+
 import sys, os
 if hasattr(sys, 'frozen'):
     os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']
@@ -89,10 +94,6 @@ class textRecognition:
         outfile:    输出文件
         """
         filename = path.basename(picfile)
-
-        APP_ID = '19441363'  # 刚才获取的 ID，下同
-        API_KEY = 'unjXMIaNC0h8ZQCeDde4rHDE'
-        SECRECT_KEY = 'nGGSfoueGV3sT94aD7Dflc0IWsKAjgtG'
         client = AipOcr(APP_ID, API_KEY, SECRECT_KEY)
 
         i = open(picfile, 'rb')
